@@ -1,0 +1,138 @@
+.header-main {
+  background-color: rgb(60, 97, 169);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 80px;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .header-main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.weeder-logo {
+  width: 250px;
+}
+@media screen and (max-width: 700px) {
+  .weeder-logo {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .weeder-logo {
+    width: 150px;
+  }
+}
+.header-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+.profile-name {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+  .profile-name {
+    display: none;
+  }
+}
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+.profile-icon {
+  width: 27px;
+  color: #fff;
+  filter: brightness(0) invert(1);
+}
+.home-icon {
+  width: 22px;
+  filter: brightness(0) invert(1);
+}
+.profile-name-2 {
+  color: #fff;
+  font-size: 13px;
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .profile-name-2 {
+    display: none;
+  }
+}
+.profile-arrow-icon {
+  padding-left: 15px;
+  cursor: pointer;
+  width: 35px;
+  filter: brightness(0) invert(1);
+}
+@media screen and (max-width: 600px) {
+  .profile-arrow-icon-container {
+    display: none;
+  }
+}
+.modal-conateiner {
+  width: 170px;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+.my-modal {
+  width: 205px;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+ 
+}
+
+
+.logout-icon {
+  color: black;
+}
+.logout-text {
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.home-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  padding-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .home-text {
+    display: none;
+  }
+}
+
+
+.modal-backdrop {
+  background-color: rgba(0,0,0,.0001) !important;
+}

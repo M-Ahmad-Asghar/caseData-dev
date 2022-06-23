@@ -1,0 +1,584 @@
+.form {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fieldCont {
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.fieldCont label {
+  width: 100%;
+  margin-bottom: 3px;
+  font-size: 16px;
+  color: black;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.fieldCont input {
+  padding-left: 10px;
+  color: gray;
+  font-family: "Roboto", serif;
+  font-size: 14px;
+  width: 90%;
+  height: 42px;
+  outline: none;
+  border-radius: 0px;
+  border: 1px solid transparent;
+  /* background-color: white; */
+  background-color: rgb(39, 60, 93, 0.061);
+  transition: ease-in-out 0.3s;
+  /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
+}
+
+.fileLabel {
+  background-color: rgb(39, 60, 93, 0.061);
+  width: 90% !important;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  cursor: pointer;
+  color: gray !important;
+  font-family: "Roboto", serif;
+  font-size: 14px !important;
+}
+@media screen and (max-width: 1100px) {
+  .fileLabel {
+    width: 100% !important;
+
+  }
+}
+
+.fieldCont input::placeholder {
+  background: transparent;
+  font-size: 14px !important;
+}
+
+.fieldCont input:focus {
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.185);
+  /* background-color: white; */
+  transition: ease-in-out 0.3s;
+  /* box-shadow: 0 -0px 20px 0 rgb(28 9 80 / 5%); */
+}
+
+.fieldCont select {
+  width: 90%;
+  height: 38px;
+  outline: none;
+  padding-left: 5px;
+  border: 1px solid transparent;
+  background-color: rgb(39, 60, 93, 0.061);
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 -0px 20px 0 rgb(28 9 80 / 5%);
+  color: gray;
+  font-family: "Roboto", serif;
+  font-size: 14px;
+}
+
+.fieldCont select:focus {
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.185);
+  background-color: rgb(39, 60, 93, 0.061);
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 -0px 20px 0 rgb(28 9 80 / 5%);
+}
+
+.btnContainer {
+  width: 100%;
+}
+
+.errMessage {
+  color: red;
+  font-weight: 300;
+  font-size: 12px;
+  padding-top: 5px;
+  position: absolute;
+  right: 10%;
+  transition: ease-in-out 0.3s;
+}
+
+/* Step 2 css */
+.step2Main {
+  display: flex;
+  justify-content: center;
+}
+
+.calendarsCont {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.calenderLeft {
+  margin-right: 100px;
+}
+
+.dateHeading {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  margin-bottom: -15px;
+  margin-left: 0px;
+}
+
+/* toggle */
+.toggle {
+  width: 45px;
+  border-radius: 10px;
+  height: 19px;
+  background-color: rgba(128, 128, 128, 0.342);
+  position: relative;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.toggleActive {
+  width: 45px;
+  border-radius: 10px;
+  height: 19px;
+  background-color: blue;
+  position: relative;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  transition: ease-in-out 0.3s;
+  transform: rotate(0deg);
+}
+
+.circleActive {
+  position: absolute;
+  top: 2px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: ease-in-out 0.3s;
+  transform: rotate(360deg);
+  background-color: white;
+}
+
+/* popup css */
+.popupCont {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.popup {
+  width: 80%;
+  height: 80vh;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 50px;
+}
+
+.btnsContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .btnsContainer {
+    bottom: 10px;
+  }
+}
+
+.btnsContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 35px;
+  outline: none;
+  margin-left: 15px;
+}
+
+.addBtn {
+  border: 1px solid transparent;
+  background-color: blue;
+  border-radius: 22px;
+  color: white;
+}
+
+.cancelBtn {
+  border-radius: 22px;
+  border: 1px solid blue;
+  background-color: white;
+  color: blue;
+}
+
+/* table css */
+.table {
+  box-shadow: var(--main-shadow);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* overflow-x: scroll; */
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(60, 97, 169);
+  padding-left: 20px;
+  overflow-x: scroll;
+}
+
+.tableRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(237, 237, 237);
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tableHeading {
+  width: 20%;
+  font-weight: 700;
+  margin-bottom: 0px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.tableData {
+  width: 20%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 50px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.tableBtns {
+  /* position: absolute;
+  right: 0px; */
+}
+
+.edIcon {
+  width: 15px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.addBanificierContainer {
+  margin-top: 40px;
+  position: absolute;
+  top: 30px;
+  right: 90px;
+}
+@media screen and (max-width: 1100px) {
+  .addBanificierContainer {
+    margin-top: 40px;
+    top: 30px;
+    right: 60px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .addBanificierContainer {
+    margin-top: 70px;
+    top: 30px;
+    right: 50px;
+  }
+}
+
+.addBanificier {
+  width: 50px;
+  height: 42px;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(230, 230, 230);
+  transition: ease-in-out 0.4s;
+  box-shadow: 0 -0px 20px 0 rgb(28 9 80 / 10%);
+}
+
+.addBanificier:hover {
+  width: 180px;
+  height: 42px;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: ease-in-out 0.4s;
+}
+
+.btnTextMain {
+  font-weight: 500;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  transition: ease-in-out 0.4s;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.addBanificier:hover .btnTextMain {
+  transition: ease-in-out 0.4s;
+  opacity: 1;
+}
+
+.btnIconCont {
+  width: 50px;
+  height: 42px;
+  background-color: rgb(230, 230, 230);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: ease-in-out 0.4s;
+  left: 0px;
+}
+
+.btnIcon {
+  width: 30px;
+  transition: ease-in-out 0.4s;
+  transform: rotate(0deg);
+}
+
+.addBanificier:hover .btnIcon {
+  transform: rotate(180deg);
+}
+
+.noBani {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(177, 177, 177);
+  text-align: center;
+}
+
+/* ================================Media Queries===================================================== */
+@media screen and (max-width: 1250px) {
+  .calenderLeft {
+    margin-right: 0px;
+  }
+
+  .calenderRight {
+    margin-top: 30px;
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .fieldCont {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .fieldCont select {
+    width: 100%;
+  }
+
+  .fieldCont input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(0.8);
+  }
+
+  .calenderRight {
+    margin-top: -30px;
+    transform: scale(0.8);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(0.8);
+  }
+
+  .calenderRight {
+    margin-top: -30px;
+    transform: scale(0.8);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(1);
+  }
+
+  .calenderRight {
+    margin-top: 30px;
+    transform: scale(1);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(0.9);
+  }
+
+  .calenderRight {
+    margin-top: 30px;
+    transform: scale(0.9);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(0.7);
+  }
+
+  .calenderRight {
+    margin-top: 30px;
+    transform: scale(0.7);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -60px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .calenderLeft {
+    margin-right: 0px;
+    transform: scale(0.7);
+  }
+
+  .calenderRight {
+    margin-top: 30px;
+    transform: scale(0.7);
+    /* width: 100%; */
+  }
+
+  .calendarsCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -90px;
+  }
+}

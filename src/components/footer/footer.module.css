@@ -1,0 +1,19 @@
+.footerMain {
+    width: 100%;
+    background-color: rgb(60, 97, 169);
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerText {
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
